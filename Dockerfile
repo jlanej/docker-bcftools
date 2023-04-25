@@ -30,5 +30,6 @@ RUN make prefix=$BCFTOOLS_INSTALL_DIR && \
 WORKDIR /
 RUN ln -s $BCFTOOLS_INSTALL_DIR/bin/bcftools /usr/bin/bcftools && \
   rm -rf /tmp/bcftools-$BCFTOOLS_VERSION
-
+RUN /usr/bin/bcftools
+RUN bcftools
 ENTRYPOINT ["/usr/bin/bcftools"]
