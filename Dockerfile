@@ -32,6 +32,6 @@ RUN ln -s $BCFTOOLS_INSTALL_DIR/bin/bcftools /usr/bin/bcftools && \
   rm -rf /tmp/bcftools-$BCFTOOLS_VERSION
   
 ENV PATH $BCFTOOLS_INSTALL_DIR/bin/:$PATH  
-RUN $BCFTOOLS_INSTALL_DIR/bin/bcftools
+RUN du -h $BCFTOOLS_INSTALL_DIR/bin/bcftools
 RUN bcftools
 ENTRYPOINT ["/usr/bin/bcftools"]
