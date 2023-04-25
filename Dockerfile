@@ -31,8 +31,6 @@ WORKDIR /
 RUN ln -s $BCFTOOLS_INSTALL_DIR/bin/bcftools /usr/bin/bcftools && \
   rm -rf /tmp/bcftools-$BCFTOOLS_VERSION
   
-ENV PATH $BCFTOOLS_INSTALL_DIR/bin/:$PATH  
-RUN du -h $BCFTOOLS_INSTALL_DIR/bin/bcftools
-RUN which bcftools
-RUN /opt/bcftools/bin/bcftools
+ENV PATH $BCFTOOLS_INSTALL_DIR/bin/:$PATH
+RUN bcftools -h
 CMD ["/bin/bash"]
