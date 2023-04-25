@@ -34,4 +34,4 @@ RUN ln -s $BCFTOOLS_INSTALL_DIR/bin/bcftools /usr/bin/bcftools && \
 ENV PATH $BCFTOOLS_INSTALL_DIR/bin/:$PATH  
 RUN du -h $BCFTOOLS_INSTALL_DIR/bin/bcftools
 RUN /bin/bash -c bcftools
-ENTRYPOINT ["/usr/bin/bcftools"]
+CMD ["/bin/bash"]
